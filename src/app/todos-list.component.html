@@ -1,0 +1,8 @@
+
+<h2>Mes todos</h2>
+<br><br>
+<input type="text" #newTodoText placeholder="nouvelle todo">
+<button (click)="addTodo(newTodoText.value)">Ajouter</button>
+<ul>
+    <li *ngFor="let todo of todos">{{ todo.content }} - <button (click)="removeTodo(todo)">x</button></li>
+</ul>
